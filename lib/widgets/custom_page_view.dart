@@ -15,10 +15,20 @@ class CustomPageView extends StatelessWidget {
       },
       children: const [
         CustomPageViewBody(
-          imagePath: "assets/images/download",
+          imagePath: "assets/images/download.svg",
           title: "E Shopping",
-          subtitle: "",
-        )
+          subtitle: "Exploar top organic frutis & grab them",
+        ),
+        CustomPageViewBody(
+          imagePath: "assets/images/download2.svg",
+          title: "Delivery on the way",
+          subtitle: "Get your order by speed delivery ",
+        ),
+        CustomPageViewBody(
+          imagePath: "assets/images/download3.svg",
+          title: "Delivery Arrived",
+          subtitle: "Order ia arrived at your Place ",
+        ),
       ],
     );
   }

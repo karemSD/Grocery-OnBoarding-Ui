@@ -12,7 +12,6 @@ class OnBoardingViewBody extends StatelessWidget {
     return Stack(
       children: [
         const CustomPageView(),
-    
         Positioned(
           top: SizeConfig.defualtSize! * 10,
           right: 32,
@@ -25,8 +24,8 @@ class OnBoardingViewBody extends StatelessWidget {
           ),
         ),
         Positioned(
-            left: SizeConfig.defualtSize! * 11,
-            right: SizeConfig.defualtSize! * 11,
+            left: SizeConfig.defualtSize! * 12,
+            right: SizeConfig.defualtSize! * 12,
             bottom: SizeConfig.defualtSize! * 10,
             child: const CustomGeneralButton(
               text: "Next",

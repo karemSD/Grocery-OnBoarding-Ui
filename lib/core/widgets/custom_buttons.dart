@@ -9,7 +9,7 @@ class CustomGeneralButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: SizeConfig.screenWidth,
-      height: SizeConfig.defualtSize! * 6.9,
+      height: SizeConfig.defualtSize! * 6.7,
       decoration: BoxDecoration(
         color: KMainColor,
         borderRadius: BorderRadius.circular(8),
@@ -19,6 +19,7 @@ class CustomGeneralButton extends StatelessWidget {
         textAlign: TextAlign.left,
         text,
         style: const TextStyle(
+          color: Colors.white,
           fontWeight: FontWeight.w500,
           fontSize: 14,
         ),
