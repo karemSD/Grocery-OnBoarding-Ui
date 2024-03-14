@@ -25,15 +25,15 @@ class AppSpaces {
   static SizedBox horizontalSpace(double size) =>
       SizedBox(width: SizeConfig.defualtSize! * size);
 
-  static final verticalSpace5 = verticalSpace(5);
-  static final verticalSpace10 = verticalSpace(10);
-  static final verticalSpace15 = verticalSpace(15);
-  static final verticalSpace20 = verticalSpace(20);
-  static final verticalSpace40 = verticalSpace(40);
+  static final verticalSpace5 = verticalSpace(2);
+  static final verticalSpace10 = verticalSpace(3);
+  static final verticalSpace15 = verticalSpace(5);
+  static final verticalSpace20 = verticalSpace(10);
+  static final verticalSpace40 = verticalSpace(15);
 
-  static final horizontalSpace5 = horizontalSpace(5);
-  static final horizontalSpace10 = horizontalSpace(10);
-  static final horizontalSpace15 = horizontalSpace(15);
-  static final horizontalSpace20 = horizontalSpace(20);
-  static final horizontalSpace40 = horizontalSpace(40);
+  static final horizontalSpace5 = horizontalSpace(2);
+  static final horizontalSpace10 = horizontalSpace(3);
+  static final horizontalSpace15 = horizontalSpace(5);
+  static final horizontalSpace20 = horizontalSpace(10);
+  static final horizontalSpace40 = horizontalSpace(15);
 }

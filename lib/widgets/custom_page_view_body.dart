@@ -1,3 +1,4 @@
+import 'package:ecommmerce/core/utils/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -22,15 +23,15 @@ class CustomPageViewBody extends StatelessWidget {
           //width: 500,
         ),
         // title image
-        Text(title,
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 23)),
-        // spacing
-        SizedBox(
-          height: 15,
+        Text(
+          title,
+          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 23),
         ),
+        // spacing
+        AppSpaces.verticalSpace(1),
 
         // second text
-        Text(subtitle, style: TextStyle(fontSize: 13)),
+        Text(subtitle, style: const TextStyle(fontSize: 13)),
 
         // pointer
       ],

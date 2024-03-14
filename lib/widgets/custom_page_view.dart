@@ -4,14 +4,16 @@ import 'package:flutter/material.dart';
 
 class CustomPageView extends StatelessWidget {
   const CustomPageView({
-    super.key,
+    super.key, required this.pageController,
   });
-
+ final PageController pageController;
   @override
   Widget build(BuildContext context) {
     return PageView(
+      controller: pageController,
       onPageChanged: (value) {
         print("man");
+
       },
       children: const [
         CustomPageViewBody(
