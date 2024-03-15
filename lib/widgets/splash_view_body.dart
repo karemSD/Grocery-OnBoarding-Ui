@@ -2,6 +2,7 @@ import 'package:ecommmerce/core/utils/size_config.dart';
 import 'package:ecommmerce/features/onboarding/onboarding_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -57,7 +58,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
           ),
         ),
         const Spacer(),
-        Image.asset("assets/images/fruits.png"),
+        LottieBuilder.asset("assets/anime.json", fit: BoxFit.fitWidth),
+        //  Image.asset("assets/images/fruits.png"),
         const Spacer(),
       ],
     );
@@ -65,7 +67,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
 }
 
 void goToNextPage() {
-  Future.delayed(const Duration(seconds: 4), () {
+  Future.delayed(const Duration(seconds: 6), () {
     Get.to(() => const OnBoardingView(), transition: Transition.fade);
   });
 }

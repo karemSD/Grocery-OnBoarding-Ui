@@ -3,7 +3,8 @@ import 'package:ecommmerce/core/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
 class CustomGeneralButton extends StatelessWidget {
-  const CustomGeneralButton({super.key, required this.text, required this.onTap});
+  const CustomGeneralButton(
+      {super.key, required this.text, required this.onTap});
   final String text;
   final VoidCallback onTap;
   @override
@@ -18,15 +19,16 @@ class CustomGeneralButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
         ),
         child: Center(
-            child: Text(
-          textAlign: TextAlign.left,
-          text,
-          style: const TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.w500,
-            fontSize: 14,
+          child: Text(
+            textAlign: TextAlign.left,
+            text,
+            style: const TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.w500,
+              fontSize: 14,
+            ),
           ),
-        )),
+        ),
       ),
     );
   }
