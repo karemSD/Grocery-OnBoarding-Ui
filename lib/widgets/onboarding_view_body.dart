@@ -37,37 +37,31 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
       children: [
         CustomPageView(pageController: pageController!),
         Positioned(
-            left: SizeConfig.defualtSize! * 12,
-            right: SizeConfig.defualtSize! * 12,
-            bottom: SizeConfig.defualtSize! * 19,
-            child: CustomDotsIndictor(
-              color: KMainColor,
-              index: pageController!.hasClients
-                  ? pageController!.page!.toInt()
-                  : 0,
-            )),
+          left: SizeConfig.defualtSize! * 12,
+          right: SizeConfig.defualtSize! * 12,
+          bottom: SizeConfig.defualtSize! * 19,
+          child: CustomDotsIndictor(
+            color: KMainColor,
+            index:
+                pageController!.hasClients ? pageController!.page!.toInt() : 0,
+          ),
+        ),
         Visibility(
           visible:
               !(pageController!.hasClients ? pageController?.page == 2 : false),
           child: Positioned(
             top: SizeConfig.defualtSize! * 10,
             right: 32,
-            child: FloatingActionButton(
-              mini: false,
-              elevation: 0,
-              shape: const CircleBorder(
-                  eccentricity: 1, side: BorderSide(color: KMainColor)),
-              backgroundColor: Colors.white,
-              onPressed: () {},
-              child: const Text(
-                "Skip",
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color: KMainColor,
-                  fontSize: 14,
-                ),
-              ),
+            child: CustomNextButton(
+              icon: Icons.skip_next,
+              iconColor: Colors.white,
+              backgroundColor: KMainColor,
+              borderColor: Colors.white,
+              onTap: () {
+                pageController?.nextPage(
+                    duration: const Duration(milliseconds: 500),
+                    curve: Curves.slowMiddle);
+              },
             ),
           ),
         ),

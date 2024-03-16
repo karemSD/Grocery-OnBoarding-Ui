@@ -12,9 +12,20 @@ class SplashViewBody extends StatefulWidget {
 }
 
 class _SplashViewBodyState extends State<SplashViewBody>
-    with SingleTickerProviderStateMixin {
+    with TickerProviderStateMixin {
   AnimationController? animeateController;
+  AnimationController? _lottieanimationController;
+
   Animation<double>? fadingAnimation;
+
+  void playAnimation() {
+    _lottieanimationController?.forward();
+  }
+
+// Stop the animation
+  void stopAnimation() {
+    _lottieanimationController?.reverse();
+  }
 
   @override
   void initState() {
@@ -23,6 +34,9 @@ class _SplashViewBodyState extends State<SplashViewBody>
       vsync: this,
       duration: const Duration(milliseconds: 850),
     );
+    _lottieanimationController =
+        AnimationController(vsync: this, duration: const Duration(seconds: 4));
+    _lottieanimationController?.forward();
     fadingAnimation =
         Tween<double>(begin: .2, end: 1).animate(animeateController!);
     animeateController?.repeat(reverse: true);
@@ -34,9 +48,11 @@ class _SplashViewBodyState extends State<SplashViewBody>
   @override
   void dispose() {
     animeateController?.dispose();
+    _lottieanimationController?.dispose();
     super.dispose();
   }
 
+  bool animerun = false;
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
@@ -52,15 +68,30 @@ class _SplashViewBodyState extends State<SplashViewBody>
             "Fruit Market",
             style: TextStyle(
                 color: Colors.white,
-                fontFamily: "Poppins ",
+                fontFamily: "Poppins",
                 fontSize: 51,
                 fontWeight: FontWeight.bold),
           ),
         ),
         const Spacer(),
-        LottieBuilder.asset(
-            repeat: false, "assets/anime.json", fit: BoxFit.fitWidth),
-        //  Image.asset("assets/images/fruits.png"),
+        GestureDetector(
+          onTap: () {
+            print("object");
+            if (animerun == false) {
+              animerun = true;
+              playAnimation();
+            } else {
+              animerun = false;
+              stopAnimation();
+            }
+          },
+          child: LottieBuilder.asset(
+            controller: _lottieanimationController,
+            repeat: false,
+            "assets/anime.json",
+            fit: BoxFit.fitWidth,
+          ),
+        ),
         const Spacer(),
       ],
     );
@@ -69,6 +100,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
 void goToNextPage() {
   Future.delayed(const Duration(seconds: 6), () {
-    Get.off(() => const OnBoardingView(), transition: Transition.fade);
+    Get.to(() => const OnBoardingView(), transition: Transition.fade);
   });
 }
