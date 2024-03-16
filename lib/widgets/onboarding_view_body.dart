@@ -52,11 +52,21 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
           child: Positioned(
             top: SizeConfig.defualtSize! * 10,
             right: 32,
-            child: const Text(
-              "Skip",
-              textAlign: TextAlign.left,
-              style: TextStyle(
-                fontSize: 14,
+            child: FloatingActionButton(
+              mini: false,
+              elevation: 0,
+              shape: const CircleBorder(
+                  eccentricity: 1, side: BorderSide(color: KMainColor)),
+              backgroundColor: Colors.white,
+              onPressed: () {},
+              child: const Text(
+                "Skip",
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: KMainColor,
+                  fontSize: 14,
+                ),
               ),
             ),
           ),

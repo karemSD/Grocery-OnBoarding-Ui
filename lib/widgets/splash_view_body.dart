@@ -58,7 +58,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
           ),
         ),
         const Spacer(),
-        LottieBuilder.asset("assets/anime.json", fit: BoxFit.fitWidth),
+        LottieBuilder.asset(
+            repeat: false, "assets/anime.json", fit: BoxFit.fitWidth),
         //  Image.asset("assets/images/fruits.png"),
         const Spacer(),
       ],
@@ -68,6 +69,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
 void goToNextPage() {
   Future.delayed(const Duration(seconds: 6), () {
-    Get.to(() => const OnBoardingView(), transition: Transition.fade);
+    Get.off(() => const OnBoardingView(), transition: Transition.fade);
   });
 }
