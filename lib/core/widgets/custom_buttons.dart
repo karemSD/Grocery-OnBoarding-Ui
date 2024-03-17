@@ -9,12 +9,15 @@ class CustomGeneralButton extends StatelessWidget {
   final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
+    return MaterialButton(
+      highlightColor: KMainColor.withOpacity(.8),
+      padding: EdgeInsets.zero,
+      onPressed: onTap,
       child: Container(
         width: SizeConfig.screenWidth,
         height: SizeConfig.defualtSize! * 6.7,
         decoration: BoxDecoration(
+          border: Border.all(color: Colors.white, width: 3),
           color: KMainColor,
           borderRadius: BorderRadius.circular(15),
         ),

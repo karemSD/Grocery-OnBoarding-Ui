@@ -8,7 +8,7 @@ class OnBoardingView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
-      body: OnBoardingViewBody(),
+      body: const OnBoardingViewBody(),
     );
   }
 }
