@@ -3,6 +3,9 @@ import 'package:get/get.dart';
 
 import 'features/splash/splash_view.dart';
 
+//! Karem Saad 
+//? Flutter and Laravel Developer 
+
 void main() {
   runApp(const FruitsMarket());
 }
