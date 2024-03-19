@@ -1,3 +1,13 @@
+## Fruit Market ✨
+
+
+<p align="center">
+<img src="Screenshots/0.gif" width="27%" title="homescreen">
+</p>
+<p align="center" style="font-size: 20px;">
+  Show some <span style="color: red;">:heart:</span> and star the repo to support the project
+</p>
+
 ## 📸 Screenshots
 <p align="center">
     <img src="Screenshots/1.jpg" width="27%" title="homescreen">
